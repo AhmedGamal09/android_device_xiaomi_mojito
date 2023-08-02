@@ -14,9 +14,6 @@ $(call inherit-product, device/xiaomi/mojito/device.mk)
 # Inherit some LineageOS stuffs
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Inherit Gapps
-$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
-
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_mojito
 PRODUCT_DEVICE := mojito
@@ -26,14 +23,21 @@ PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
+# AlphaDroid Stuffs
+ALPHA_BUILD_TYPE := UNOFFICIAL
+ALPHA_MAINTAINER := AhmedـGamal
+TARGET_ENABLE_BLUR := true
+TARGET_INCLUDE_MATLOG := false
+TARGET_USE_GRAPHENE_CAMERA := false
+TARGET_USE_PIXEL_LAUNCHER := false
+TARGET_EXCLUDES_AUDIOFX := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+GAPPS_BUILD_TYPE := 0
+TARGET_USE_GOOGLE_TELEPHONY := true
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="mojito" \
     PRODUCT_NAME="mojito" \
     PRIVATE_BUILD_DESC="redfin-user 12 SP1A.211105.003 7757856 release-keys"
 
 BUILD_FINGERPRINT :="google/redfin/redfin:12/SP1A.211105.003/7757856:user/release-keys"
-
-
-# OFFICIAL SPICEOS
-
-# SPICEOS_BUILDTYPE = OFFICIAL
