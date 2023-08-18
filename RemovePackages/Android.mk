@@ -6,19 +6,8 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_OVERRIDES_PACKAGES := \
     Seedvault \
-    Jelly \
-    GoogleTTS \
-    AndroidAutoStubPrebuilt \
-    CalendarGooglePrebuilt \
-    Chrome \
-    Chrome-Stub \
-    GooglePrintRecommendationService \
-    LocationHistoryPrebuilt \
-    PartnerSetupPrebuilt \
-    Photos \
-    TagGoogle \
-    WellbeingPrebuilt
-
+    Jelly
+    
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_SRC_FILES := /dev/null
